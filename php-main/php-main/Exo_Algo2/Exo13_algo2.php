@@ -13,12 +13,14 @@
      private $modele;
      private $nbPortes;
      private $vitesseActuelle;
+     private $ralentir;
   
      public function __construct($marque, $modele, $nbPortes) {
          $this->marque = $marque;
          $this->modele = $modele;
          $this->nbPortes = $nbPortes;
          $this->vitesseActuelle = 0;
+         $this ->ralentir =$ralentir;
      }
   
      public function demarrer() {
@@ -33,6 +35,10 @@
      public function stopper() {
          $this->vitesseActuelle = 0;
          echo "La voiture s'arrête.<br> <br>";
+     }
+
+     public function ralentir(){
+        $this ->ralentir;
      }
   
      public function afficherInformations() {
