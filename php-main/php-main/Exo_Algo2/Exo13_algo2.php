@@ -7,7 +7,7 @@
 </head>
 <body>
 <?php
- 
+// -------------- CLASS ----------------- 
  class Voiture {
      private $marque;
      private $modele;
@@ -22,30 +22,32 @@
          $this->vitesseActuelle = 0;
          $this ->ralentir =$ralentir;
      }
-  
-     public function demarrer() {
+  // ------------- METHOD 1 -----------------
+
+     public function getdemarrer() {
          echo "La voiture démarre.<br>";
      }
-  
-     public function accelerer() {
+// ------------- METHOD 2 -----------------
+
+     public function getaccelerer() {
          $this->vitesseActuelle += 50;
          echo "La voiture accélère.<br> Vitesse actuelle : {$this->vitesseActuelle} km/h <br> <br>";
      }
-  
-     public function stopper() {
+// ------------- METHOD 3 -----------------
+
+     public function getstopper() {
          $this->vitesseActuelle = 0;
          echo "La voiture s'arrête.<br> <br>";
      }
+// ------------- METHOD 4 -----------------
 
-     public function ralentir(){
+     public function getralentir(){
         $this ->ralentir;
      }
-  
+// ------------ AFFICHER INFORMATIONS -------------
      public function afficherInformations() {
             echo "Marque: $this->marque  <br> Modèle: $this->modele  <br> Portes: $this->nbPortes <br> Vitesse: $this->vitesseActuelle km/h <br> <br>";
              }
-  
-
  }
   
 $v1 = new Voiture("Peugeot", "408", 5);
