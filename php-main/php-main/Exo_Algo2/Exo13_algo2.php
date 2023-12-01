@@ -24,24 +24,24 @@
      }
   // ------------- METHOD 1 -----------------
 
-     public function getdemarrer() {
+     public function demarrer() {
          echo "La voiture démarre.<br>";
      }
 // ------------- METHOD 2 -----------------
 
-     public function getaccelerer() {
+     public function accelerer() {
          $this->vitesseActuelle += 50;
          echo "La voiture accélère.<br> Vitesse actuelle : {$this->vitesseActuelle} km/h <br> <br>";
      }
 // ------------- METHOD 3 -----------------
 
-     public function getstopper() {
+     public function stopper() {
          $this->vitesseActuelle = 0;
          echo "La voiture s'arrête.<br> <br>";
      }
 // ------------- METHOD 4 -----------------
 
-     public function getralentir(){
+     public function ralentir(){
         $this ->ralentir;
      }
 // ------------ AFFICHER INFORMATIONS -------------
