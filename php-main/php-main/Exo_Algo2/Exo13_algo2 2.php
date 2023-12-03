@@ -65,13 +65,13 @@
   // ------------- METHOD 1 -----------------
 
      public function demarrer() {
-      $this->estAllumee=true;
+      $this->estAllumee==true;
       echo "Le véhicule  {$this->marque} {$this->modele} démarre <br>";
      }
 // ------------- METHOD 2 -----------------
 
      public function accelerer($vitesse) {
-        if ($this ->estAllumee = false){
+        if ($this ->estAllumee == false){
            echo "Pour accélérer, il faut démarrer le véhicule {$this->marque} {$this->modele} " ;
          } else {
             $this->vitesseActuelle += $vitesse;
@@ -87,7 +87,7 @@
 // ------------- METHOD 4 -----------------
 
    public function ralentir($vitesse){
-      if ($this ->estAllumee = false){
+      if ($this ->estAllumee == false){
          echo "Il faut démarrer la voiture ! <br>";
       } else{
          $this->vitesseActuelle -= $vitesse;
