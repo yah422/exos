@@ -6,15 +6,14 @@ class Titulaire{
     private string $ville;
     private string $toutlescomptes;
     private string $dateNaissance;
-    private $titulaires;
+    private array $comptes;
 
-    public function __construct($nom,$prenom,$ville,$toutlescomptes,$dateNaissance){
+    public function __construct($nom,$prenom,$ville,$dateNaissance){
         $this -> nom = $nom;
         $this -> prenom = $prenom;
         $this -> ville = $ville;
-        $this -> toutlescomptes = $toutlescomptes;
         $this -> dateNaissance = $dateNaissance;
-        $this -> titulaires = [];
+        $this -> comptes = [];
         
     }
 
@@ -60,17 +59,7 @@ class Titulaire{
 
         return $this;
     }
-// ------------------ GET ET SET DE TOUT LES COMPTES ----------------------
-    public function getToutlescomptes()
-    {
-        return $this->toutlescomptes;
-    }
-    public function setToutlescomptes($toutlescomptes)
-    {
-        $this->toutlescomptes = $toutlescomptes;
 
-        return $this;
-    }
 // ------------------ GET ET SET DE LA DATE DE NAISSANCE ----------------------
     public function getDateNaissance()
     {
@@ -83,14 +72,17 @@ class Titulaire{
         return $this;
     } 
 // ------------------------- METHODE ADDCOMPTE ---------------------
-    public function addCompte($titulaire){
-        $this -> titulaires[] = $titulaire;
+    public function addCompte($compte){
+        $this -> comptes[] = $compte;
 
     }
     
     public function afficherInfos(){
-        echo "Nom : $this->nom <br> Prénom : $this->prenom <br> Ville : $this->ville <br>  Ensemble des comptes : $this->toutlescomptes <br> Date de naissance : $this->dateNaissance <br>";
-    }
- 
-
+        echo "Nom : $this->nom <br> Prénom : $this->prenom <br> Ville : $this->ville  <br> Date de naissance : $this->dateNaissance <br>";
+        echo "Liste des comptes : <br>";
+            foreach ($this->comptes as $compte) {
+                echo "- $compte <br>";
+            }
+    } 
+    
 }

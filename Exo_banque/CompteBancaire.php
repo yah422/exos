@@ -64,6 +64,7 @@ class CompteBancaire{
         $this -> personne = $personne;
         $this -> personne -> addCompte($this);
         $this->solde = $soldeInitial;
+
     
     }
     public function getSolde() {
