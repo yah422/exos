@@ -87,9 +87,10 @@ class Titulaire{
         $this -> titulaires[] = $titulaire;
 
     }
- 
+    
     public function afficherInfos(){
-        echo "Nom : $this->nom <br> Prénom : $this->prenom <br> Ville : $this->ville <br>  Ensemble des comptes : $this->toutlescomptes <br> Date de naissance : $this->dateNaissance";
+        echo "Nom : $this->nom <br> Prénom : $this->prenom <br> Ville : $this->ville <br>  Ensemble des comptes : $this->toutlescomptes <br> Date de naissance : $this->dateNaissance <br>";
     }
+ 
 
 }

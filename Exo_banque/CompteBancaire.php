@@ -1,21 +1,22 @@
 <?php
 
 class CompteBancaire{
-    private string $libellé;
+    private string $libelle;
     private int $soldeInitial;
     private int $deviseMonetaire;
-    private $titulaire;
+    private $personne;
+    private $solde;
 
 
 // ------------------ GET ET SET DU LIBELLEE ----------------------
 
-    public function getLibellé()
+    public function getLibelle()
     {
-        return $this->libellé;
+        return $this->libelle;
     }
-    public function setLibellé($libellé)
+    public function setLibelle($libelle)
     {
-        $this->libellé = $libellé;
+        $this->libelle = $libelle;
 
         return $this;
     }
@@ -43,28 +44,55 @@ class CompteBancaire{
 
         return $this;
     }
-// ------------------ GET ET SET DU TITULAIRE UNIQUE ----------------------
+// ------------------ GET ET SET DE LA PERSONNE UNIQUE ----------------------
 
-    public function getTitulaire()
+    public function getPersonne()
     {
-        return $this->titulaire;
+        return $this->personne;
     }
-    public function setTitulaire($titulaire)
+    public function setPersonne($personne)
     {
-        $this->titulaire = $titulaire;
+        $this->personne = $personne;
 
         return $this;
     }
 
-    public function __construct ($libellé, $soldeInitial, $deviseMonetaire, $titulaire){
-        $this -> libellé = $libellé;
+    public function __construct ($libelle, $soldeInitial, $deviseMonetaire, $personne){
+        $this -> libelle = $libelle;
         $this -> soldeInitial = $soldeInitial;
         $this -> deviseMonetaire = $deviseMonetaire;
-        $this -> titulaire = $titulaire;
-        $this -> titulaire -> addCompte($this);
-
-
+        $this -> personne = $personne;
+        $this -> personne -> addCompte($this);
+        $this->solde = $soldeInitial;
+    
     }
+    public function getSolde() {
+        return $this->solde;
+    }
+
+    public function crediter($montant) {
+        $this->solde += $montant;
+    }
+
+    public function debiter($montant) {
+        if ($montant <= $this->solde) {
+            $this->solde -= $montant;
+        } else {
+            echo "Solde insuffisant.";
+        }
+    }
+
+    public function effectuerVirement(CompteBancaire $destinataire, $montant) {
+        $this->debiter($montant);
+        $destinataire->crediter($montant);
+    }
+
+ //------------------------- AJOUT DE LA METHODE  __toString ---------------------------------------
+    public function __toString() {
+    return "Libellé : {$this->libelle},<br> Solde Initial : {$this->soldeInitial},<br> Devise Monétaire : {$this->deviseMonetaire}<br>";
 }
 
     
+}
+
+?>
