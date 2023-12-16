@@ -13,7 +13,7 @@
         private string $prenomClient;
         private string $dateEntree;
         private string $dateSortie;
-        private string $numeroChambre;
+        private int $numeroChambre;
 
 //--------------- get et set du nomClient ----------------------
         public function getNomClient(): string

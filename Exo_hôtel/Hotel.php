@@ -81,7 +81,18 @@
             $this-> nbreChambreReserve = $nbreChambreReserve;
             $this-> nbreChambreDispo = $nbreChambreDispo;
         }
+//------------------------- AJOUT DE LA METHODE  __toString ---------------------------------------
+        public function __toString() {
+            return "{$this-> nomHotel} \n <br> {$this-> adresse} \n <br> Nombre de chambres: {$this-> nbreChambre} \n <br> Nombre de chambres réservées: {$this-> nbreChambreReserve} \n <br> Nombre de chambres disponible: {$this-> nbreChambreDispo} \n <br>";
     }
+//----------------------- fonction afficherInfos ----------------------------
+    public function afficherInfos(){
+        echo "{$this-> nomHotel} \n <br> {$this-> adresse} \n <br> Nombre de chambres: {$this-> nbreChambre} \n <br> Nombre de chambres réservées: {$this-> nbreChambreReserve} \n <br> Nombre de chambres disponible: {$this-> nbreChambreDispo} \n <br>";
+
+    } 
+    }
+
+
 
     ?>
 </body>

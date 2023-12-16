@@ -12,7 +12,7 @@
         private string $wifi;
         private string $etat;
         private int $prix;
-        private string $numeroChambre;
+        private int $numeroChambre;
         private string $nbreLit;
       
 //--------------- get et set du wifi ----------------------

@@ -69,6 +69,12 @@
             $this-> adresse = $adresse;
             $this-> numTel = $numTel;
         }
+
+//----------------------- fonction afficherInfos ----------------------------
+        public function afficherInformation(){
+            echo "Prénom: {$this-> prenom} \n <br> Nom: {$this-> nom} \n <br> Adresse: {$this-> adresse} \n <br> Numéro de téléphone: {$this-> numTel}";
+
+} 
     }
 
     ?>
