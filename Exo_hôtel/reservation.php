@@ -9,10 +9,10 @@
     <?php
 //-------------- création de la class réservation ----------------------
     class Reservation{
-        private string $nomClient;
-        private string $prenomClient;
-        private string $dateEntree;
-        private string $dateSortie;
+        private $nomClient;
+        private $prenomClient;
+        private $dateEntree;
+        private $dateSortie;
         private int $numeroChambre;
 
 //--------------- get et set du nomClient ----------------------
