@@ -12,8 +12,8 @@
     class Client{
         private string $nom;
         private string $prenom;
-        private string $adresse;
-        private string $numTel;
+        private string $numChambre;
+        private string $dateDuree;
 
 //-------------------- Get et set de nom ---------------------------
         public function getNom(): string
@@ -39,42 +39,56 @@
                 return $this;
         }
 
-//-------------------- Get et set de adresse ---------------------------
-        public function getAdresse(): string
+//-------------------- Get et set de numChambre ---------------------------
+        public function getNumChambre(): string
         {
-                return $this->adresse;
+                return $this->numChambre;
         }
-        public function setAdresse(string $adresse): self
+        public function setNumChambre(string $numChambre): self
         {
-                $this->adresse = $adresse;
+                $this->numChambre = $numChambre;
 
                 return $this;
         }
 
-//-------------------- Get et set de numTel ---------------------------
-        public function getNumTel(): string
+//-------------------- Get et set de dateEntree ---------------------------
+        public function getDateEntree(): string
         {
-                return $this->numTel;
+                return $this->dateEntree;
         }
-        public function setNumTel(string $numTel): self
+        public function setDateEntree(string $dateEntree): self
         {
-                $this->numTel = $numTel;
+                $this->dateEntree = $dateEntree;
 
                 return $this;
         }
+//-------------------- Get et set de dateSortie ---------------------------
+        public function getDateSortie(): string
+        {
+                return $this->dateSortie;
+        }
+        public function setDateSortie(string $dateSortie): self
+        {
+                $this->dateSortie = $dateSortie;
+
+                return $this;
+        }
+
 //------------------- Création de la function construct -----------------
-        public function __construct($nom,$prenom,$adresse,$numTel){
+        public function __construct($nom,$prenom,$numChambre,$dateEntree,$dateSortie){
             $this-> nom = $nom;
             $this-> prenom = $prenom;
-            $this-> adresse = $adresse;
-            $this-> numTel = $numTel;
+            $this-> numChambre = $numChambre;
+            $this-> dateEntree = $dateEntree;
+            $this-> dateSortie = $dateSortie;
         }
 
 //----------------------- fonction afficherInfos ----------------------------
         public function afficherInformation(){
-            echo "Prénom: {$this-> prenom} \n <br> Nom: {$this-> nom} \n <br> Adresse: {$this-> adresse} \n <br> Numéro de téléphone: {$this-> numTel}";
+            echo "{$this-> nom} {$this-> prenom} - Chambre {$this-> numChambre} - du {$this->dateEntree} au {$this-> dateSortie}";
+        } 
 
-} 
+        
     }
 
     ?>

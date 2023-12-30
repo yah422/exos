@@ -87,7 +87,7 @@
     }
 //----------------------- fonction afficherInfos ----------------------------
     public function afficherInfos(){
-        echo "{$this-> nomHotel} \n <br> {$this-> adresse} \n <br> Nombre de chambres: {$this-> nbreChambre} \n <br> Nombre de chambres réservées: {$this-> nbreChambreReserve} \n <br> Nombre de chambres disponible: {$this-> nbreChambreDispo} \n <br>";
+        echo "{$this-> adresse} \n <br> Nombre de chambres: {$this-> nbreChambre} \n <br> Nombre de chambres réservées: {$this-> nbreChambreReserve} \n <br> Nombre de chambres disponible: {$this-> nbreChambreDispo} \n <br>";
 
     } 
     }

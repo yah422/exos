@@ -8,18 +8,41 @@
 <body>
     <?php
 
-// ON MET EN PLACE REQUIRE POUR FAIRE LE LIEN ENTRE LES DIFFERENTS FICHIERS
+// ------ ON MET EN PLACE REQUIRE POUR FAIRE LE LIEN ENTRE LES DIFFERENTS FICHIERS -------
     require("reservation.php");
     require("Hotel.php");
     require("client.php");
     require("chambre.php");
 
-    $client1= new Client("Saidi ","Asma ","12 rue de la folie ","07.65.45.34.51");
+// ------------------ CREATION DE DIFFERENTES CLASS --------------------
+    $client1 = new Client("Saidi ","Asma ","17","01-01-2021","12-01-2021");
+    $client2 = new Client("Mr ","Joyeux ","3","23-12-2023","01-01-2023");
+    $client3 = new Client("Saidi ", "Asma ","23","13-06-2022","24-06-2022");
 
-    $Hilton = new Hotel("Hilton ","10 route de la gare, Strabourg ",30, 3, 27);
+    $Hilton = new Hotel("","10 route de la gare, Strabourg ",30, 3, 27);
+    // $Regent = new Hotel("Paris ", 30 ,3 ,27);
+
+// -------------------- AFFICHAGE DES INFOS ------------------
+    ?> 
+
+    <h1> Hilton **** Strasbourg </h1>
+
+    <?php
     echo $Hilton->afficherInfos();
     echo "<br>";
+    ?>
+
+    <h1> Réservation de l'hôtel Hilton **** Strasbourg </h1>
+    
+    <?php
+    echo "<br>";
     echo $client1->afficherInformation();
+    echo "<br>";
+    echo $client2->afficherInformation();
+    echo "<br>";
+    echo $client3->afficherInformation();
+
+
 
 
     ?>
